@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import constant from "../config/constant";
+import constant from "../hooks/config/constant";
 import { Link, useNavigate } from "react-router-dom";
 
 const SideNavbar = () => {
@@ -20,7 +20,6 @@ const SideNavbar = () => {
                                 {item.icon}
                                 <p className="m-[5px] text-white text-l">{item.title}</p>
                                 </Link>
-                                
                             </div>
                         )
                     })}</div>

@@ -1,5 +1,5 @@
 import React from "react";
-import {useNavigate} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 const Landing = () => {
     const history = useNavigate()
@@ -9,7 +9,9 @@ const Landing = () => {
 return (
     <div className=" relative w-screen h-screen px-[12%] pt-[3%] bg-gradient-to-r from-sky-900 to-indigo-950">
         <div className="flex place-items-center ">
+        <Link to="/" >
         <img className="h-[95px] w-[95px] object-fill" src="/img/logo.png"/>
+        </Link>
         <p className="text-slate-200 text-[30px] italic">All Smile Dental Clinic</p>
         </div>
         <div className="flex justify-between ">
@@ -34,7 +36,7 @@ return (
        
         </div>
         <div class=" absolute w-screen h-13 absolute bottom-0 left-0 overflow-hidden">
-    <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M0 43.9999C106.667 43.9999 213.333 7.99994 320 7.99994C426.667 7.99994 533.333 43.9999 640 43.9999C746.667 43.9999 853.333 7.99994 960 7.99994C1066.67 7.99994 1173.33 43.9999 1280 43.9999C1386.67 43.9999 1440 19.0266 1440 9.01329V100H0V43.9999Z"
             class="fill-current text-gray-200"></path>

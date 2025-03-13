@@ -5,36 +5,22 @@ import Landing from "../components/landingPage";
 import Navbar from "../components/Navbar";
 import Home from "./routes/Home";
 import Booking from "./routes/Booking";
+import Signup from "./routes/Sigup";
 
-function AppLayout (){
+
+
+const App = () => {
   const checkPath = window.location.pathname;
-  return(
-  <>
-  {checkPath === '/' ? (<Landing />) : (
-  <>  <Navbar />
-      <Outlet />
-  </>
-)
-  }
-  
-  
-  </>
+  return (
+    <>
+    <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path='signup' element={<Signup />} />
+           <Route path='/home' element={<Navbar />} />
+           <Route path='/booking' element={<Booking />} />
+    </Routes>
+    </>
   )
-};
-
-const router = createBrowserRouter(
-  createRoutesFromElements(
-      <Route element={<AppLayout />}>
-        <Route path="/" element={<Landing />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/booking' element={<Booking />} />
-      </Route>
-  )
-)
-
-function App() {
-  return <RouterProvider router={router} />
-  ;
 }
 
 export default App;
